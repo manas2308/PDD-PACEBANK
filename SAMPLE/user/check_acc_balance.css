@@ -1,0 +1,275 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container and Sidebar Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav > li {
+    margin: 10px 0;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+.dropdown-menu {
+    display: none;
+    padding-left: 15px;
+    background-color: #444;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.main-content {
+    margin-left: 270px; /* Adjusted for sidebar width */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+/* Account Details Box */
+.account-details {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.account-details div {
+    width: 30%;
+}
+
+.account-details p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.account-details strong {
+    font-size: 16px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    font-size: 14px;
+}
+
+/* Balance Summary - Vertical Layout */
+.balance-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    gap: 20px;
+}
+
+.balance-summary div {
+    text-align: center;
+    width: 100%;
+}
+
+.balance-summary h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.balance-summary p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Print Button */
+.print-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.print-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .account-details {
+        flex-wrap: wrap;
+    }
+    
+    .account-details div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .balance-summary {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+/* Sidebar Styling */
+/* Body Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 270px; /* Adjusted for sidebar width */
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Container for Main Content */
+.container {
+  flex: 1;
+  padding: 40px;
+  margin-left: 270px; /* Ensure content doesn't go under the sidebar */
+}
+
+/* Account Details and Tables */
+.account-details, .tables-container {
+  margin-bottom: 30px;
+}
+
+.account-details p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.tables-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tables-container th, .tables-container td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.tables-container th {
+  background-color: #333;
+}
+
+.tables-container td {
+  background-color: #fafafa;
+}
+
+.tables-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+.balance-summary {
+  display: flex;
+  flex-direction: row; /* Makes it horizontal */
+  justify-content: space-between; /* Ensures spacing */
+  align-items: center;
+  gap: 20px; /* Adds spacing between elements */
+} 
+
+

@@ -1,0 +1,324 @@
+.sidebar a:hover {
+    background-color: #f0f0f0; /* Changes background on hover (optional) */
+    color: #4caf50;            /* Changes text color on hover (optional) */
+  }
+  
+  .dropdown-menu {
+    padding-left: 20px; /* Indents the submenu items */
+  }
+  
+  .dropdown a {
+    cursor: pointer; /* Adds pointer cursor for dropdown items */
+  }
+  
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: #575757;
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .nav .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #444;
+    padding-left: 10px;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    width: 79%;
+  }
+  
+  
+  
+  /* Sidebar Styling (No Change Here) */
+  .sidebar {
+    width: 240px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  .main-content {
+    margin-left:280px;
+    width:100%; /* Remaining space after sidebar */
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .sidebar a:hover {
+    background-color: transparent;
+    color: #4caf50;
+  }
+  
+  .dropdown-menu {
+    padding-left: 20px;
+  }
+  
+  .dropdown a {
+    cursor: pointer;
+  }
+  
+  /* Header */
+  header h1 {
+    margin-bottom: 5px;
+  }
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #343a40; /* Matching brown button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-container button:hover {
+    background-color: #343a40; /* Darker brown for hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #343a40; /* Brown table headers */
+    color: white;
+}
+
+.manage-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #ff6666;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    background-color: #343a40; /* Matching brown pagination */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: #343a40; /* Darker brown for hover */
+}
+
+.summary-cards, .financial-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #3498db;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Charts */
+.charts-container {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Ensure row layout for horizontal alignment */
+    justify-content: space-between; /* Space between charts */
+    gap: 20px; /* Add gap between charts */
+}
+
+.charts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.charts-header .minimize-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chart {
+    flex: 1;
+    max-width: 45%; /* Ensure charts take equal width but still fit horizontally */
+}
+
+.chart canvas {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transactions-table th, .transactions-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.transactions-table th {
+    background-color: #343a40; /* Brown for table headers */
+    color: white;
+}
+
+ .badge.deposit {
+    background-color: #27ae60;
+}
+
+ .badge.withdrawal {
+    background-color: #e74c3c;
+}
+
+ .badge.transfer {
+    background-color: #f39c12;
+}
+/* Mobile menu (three dots) */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Sidebar (Hidden by default on small screens) */
+@media screen and (max-width: 768px) {
+  .sidebar {
+      position: fixed;
+      left: -250px; /* Hide sidebar initially */
+      width: 250px;
+      height: 100%;
+      background: #333;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 999;
+  }
+
+  /* Show sidebar when toggled */
+  .sidebar.active {
+      left: 0;
+  }
+
+  /* Show menu button */
+  .mobile-menu {
+      display: block;
+  }
+
+  /* Adjust content margin */
+  .main-content {
+      margin-left: 0;
+  }
+}

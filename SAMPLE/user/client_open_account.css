@@ -1,0 +1,289 @@
+.sidebar a:hover {
+    background-color: #f0f0f0; /* Changes background on hover (optional) */
+    color: #4caf50;            /* Changes text color on hover (optional) */
+  }
+  
+  .dropdown-menu {
+    padding-left: 20px; /* Indents the submenu items */
+  }
+  
+  .dropdown a {
+    cursor: pointer; /* Adds pointer cursor for dropdown items */
+  }
+  
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: #575757;
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .nav .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #444;
+    padding-left: 10px;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    width: 79%;
+  }
+  
+  
+  
+  /* Sidebar Styling (No Change Here) */
+  .sidebar {
+    width: 240px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  .main-content {
+    margin-left:280px;
+    width:100%; /* Remaining space after sidebar */
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .sidebar a:hover {
+    background-color: transparent;
+    color: #4caf50;
+  }
+  
+  .dropdown-menu {
+    padding-left: 20px;
+  }
+  
+  .dropdown a {
+    cursor: pointer;
+  }
+  
+  /* Header */
+  header h1 {
+    margin-bottom: 5px;
+  }
+  .account-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1; /* Allows it to take remaining space */
+    margin-left: 270px; /* Pushes form to the right to avoid overlapping sidebar */
+}
+
+.account-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling for the form */
+/* Ensure form matches .account-form */
+.account-form {
+    max-width: 600px; /* Set a fixed width for better alignment */
+    width: 100%;
+    margin: 0 auto; /* Centering the form */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inside .account-form */
+.account-form form {
+    width: 100%; /* Ensure form takes full width */
+}
+
+/* Form input fields */
+.account-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.account-form .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.account-form .form-group input,
+.account-form .form-group select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Ensure button fits the form width */
+.account-form .open-account-btn {
+    width: 80%; /* Button takes full width of the form */
+    max-width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.account-form .open-account-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.account-form .open-account-btn:active {
+    background-color: #004494;
+    transform: scale(1);
+}
+/* Full-width button */
+/* Styling for Open iBanking Account Button */
+.open-account-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    padding: 15px 20px; /* Increased padding for a better look */
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Large text for better visibility */
+    font-weight: bold;
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Limit width on larger screens */
+    display: block;
+    margin: 20px auto; /* Center the button */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.open-account-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.open-account-btn:active {
+    background-color: #004494; /* Even darker blue when clicked */
+    transform: scale(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .open-account-btn {
+        font-size: 16px;
+        padding: 12px 18px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .open-account-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+        max-width: 200px;
+    }
+}
+/* Mobile menu (three dots) */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Sidebar (Hidden by default on small screens) */
+@media screen and (max-width: 768px) {
+  .sidebar {
+      position: fixed;
+      left: -250px; /* Hide sidebar initially */
+      width: 250px;
+      height: 100%;
+      background: #333 !important;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 999;
+  }
+
+  /* Show sidebar when toggled */
+  .sidebar.active {
+      left: 0;
+  }
+
+  /* Show menu button */
+  .mobile-menu {
+      display: block;
+  }
+
+  /* Adjust content margin */
+  .main-content {
+      margin-left: 100px  !important;
+    
+  }
+  .account-container {
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1; /* Allows it to take remaining space */
+    margin-left: 90px; /* Pushes form to the right to avoid overlapping sidebar */
+}
+
+}
