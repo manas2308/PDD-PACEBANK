@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="logo">Internet Banking</h2>
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture">
+                <p>Manas Reddy</p>
+            </div>
+            <ul class="nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Financial Reports</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h2 class="page-title">Client Dashboard</h2>
+                <nav class="breadcrumbs">
+                    <span>Home</span> / <span>Dashboard</span>
+                </nav>
+            </header>
+
+            <!-- Summary Cards -->
+            <section class="summary-cards">
+                <div class="card">Deposits<br>$100,000</div>
+                <div class="card">Withdrawals<br>$5,000</div>
+                <div class="card">Transfers<br>$3,000</div>
+                <div class="card">Wallet Balance<br>$92,000</div>
+            </section>
+
+            <!-- Financial Summary -->
+            <section class="financial-summary">
+                <div class="card">Deposits<br>$1,000,000</div>
+                <div class="card">Withdrawals<br>$1,000</div>
+                <div class="card">Transfers<br>$500</div>
+                <div class="card">Wallet Balance<br>$998,000</div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-container">
+                <div class="charts-header">
+                    <h3>Accounts & Transactions Overview</h3>
+                    <button class="minimize-btn" onclick="toggleCharts()">–</button>
+                </div>
+                <div class="charts" id="charts-section">
+                    <div class="chart">
+                        <h3>Accounts Per Account Types</h3>
+                        <canvas id="accountsChart"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h3>Transactions</h3>
+                        <canvas id="transactionsChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction History Section -->
+            <section class="latest-transactions">
+                <h3>Transaction History</h3>
+                <table class="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>Transaction Code</th>
+                            <th>Account No.</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Account Owner</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TRX12345</td>
+                            <td>ACC001</td>
+                            <td class="badge deposit">Deposit</td>
+                            <td>$500</td>
+                            <td>John Doe</td>
+                            <td>2025-01-27 14:35:00</td>
+                        </tr>
+                        <tr>
+                            <td>TRX12346</td>
+                            <td>ACC002</td>
+                            <td class="badge withdrawal">Withdrawal</td>
+                            <td>$200</td>
+                            <td>Jane Smith</td>
+                            <td>2025-01-27 15:15:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function toggleCharts() {
+            const chartsSection = document.getElementById('charts-section');
+            chartsSection.style.display = chartsSection.style.display === 'none' ? 'grid' : 'none';
+        }
+
+        const accountsData = {
+            labels: ['Savings', 'Current', 'Fixed Deposit', 'Loan', 'Other'],
+            datasets: [{
+                label: 'Accounts',
+                data: [10, 15, 5, 8, 7],
+                backgroundColor: ['#4caf50', '#2196f3', '#ff9800', '#e91e63', '#9c27b0']
+            }]
+        };
+
+        const transactionsData = {
+            labels: ['Deposits', 'Withdrawals', 'Transfers'],
+            datasets: [{
+                label: 'Transactions',
+                data: [1000000, 1000, 500],
+                backgroundColor: ['#ff5722', '#03a9f4', '#8bc34a']
+            }]
+        };
+
+        new Chart(document.getElementById('accountsChart'), {
+            type: 'pie',
+            data: accountsData
+        });
+
+        new Chart(document.getElementById('transactionsChart'), {
+            type: 'pie',
+            data: transactionsData
+        });
+    </script>
+</body>
+</html>

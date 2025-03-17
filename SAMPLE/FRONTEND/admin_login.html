@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin_login.css">
+    <style>
+        body {
+            background-image: url('../IMAGES/index1.avif');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Position the image in the top-left corner */
+        .corner-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .corner-image img {
+            width: 50px;  /* Adjust image size */
+            height: auto;
+        }
+
+        /* Styling for the login container */
+        .login-container {
+            margin-top: 100px;  /* Adjust this value based on the image position */
+            text-align: center;
+        }
+
+
+     
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Corner image with link -->
+    <a href="../index.html" class="corner-image">
+        <img src="../IMAGES/download.png" alt="Logo">
+    </a>
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="../BACKEND/admin_login.php" method="POST">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

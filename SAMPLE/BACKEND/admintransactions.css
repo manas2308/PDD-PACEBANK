@@ -1,0 +1,237 @@
+.wrapper {
+    padding: 20px;
+}
+
+/* Container and Sidebar Styling */
+.container {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #444;
+    padding-left: 10px;
+}
+
+.main-content {
+    margin-left: 270px; /* Adjusted for sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+.manage-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #ff6666;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+.rollback-btn {
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.rollback-btn:hover {
+    background-color: darkred;
+}
+
+.badge-success {
+    color: white;
+    background-color: green;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+.badge-danger {
+    color: white;
+    background-color: red;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+.badge-primary {
+    color: white;
+    background-color: blue;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+.filter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.print-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width:150px;
+}
+
+.print-btn:hover {
+    background-color: #0056b3;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+@media print {
+    .filter-form, .print-btn, .sidebar {
+        display: none;
+    }
+    table {
+        page-break-before: auto;
+    }
+}
+.dataTables_wrapper{
+    width:100%;
+}

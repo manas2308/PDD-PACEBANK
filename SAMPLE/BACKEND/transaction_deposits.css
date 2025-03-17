@@ -1,0 +1,223 @@
+
+.sidebar a:hover {
+    background-color: #f0f0f0; /* Changes background on hover (optional) */
+    color: #4caf50;            /* Changes text color on hover (optional) */
+  }
+  
+  .dropdown-menu {
+    padding-left: 20px; /* Indents the submenu items */
+  }
+  
+  .dropdown a {
+    cursor: pointer; /* Adds pointer cursor for dropdown items */
+  }
+  
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: #575757;
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .nav .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #444;
+    padding-left: 10px;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    width: 79%;
+  }
+  
+  
+  
+  /* Sidebar Styling (No Change Here) */
+  .sidebar {
+    width: 240px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  .main-content {
+    margin-left:280px;
+    width:100%; /* Remaining space after sidebar */
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .sidebar a:hover {
+    background-color: transparent;
+    color: #4caf50;
+  }
+  
+  .dropdown-menu {
+    padding-left: 20px;
+  }
+  
+  .dropdown a {
+    cursor: pointer;
+  }
+  
+  /* Header */
+  header h1 {
+    margin-bottom: 5px;
+  }
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+/* Button Styling */
+.manage-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #ff6666;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+/* Export Buttons */
+.export-buttons {
+    margin-top: 20px;
+}
+
+.export-buttons button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.export-buttons button:hover {
+    background-color: #2980b9;
+}

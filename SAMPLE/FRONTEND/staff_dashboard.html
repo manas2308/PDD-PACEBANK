@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Internet Banking</div>
+            <ul class="nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Accounts</a></li>
+                <li><a href="#">Finances</a></li>
+                <li><a href="#">Transactions History</a></li>
+                <li><a href="#">Financial Reports</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div class="page-title">Staff Dashboard</div>
+                <div class="breadcrumbs">Home / Dashboard</div>
+            </header>
+
+            <section class="summary-cards">
+                <div class="card">Clients<br>7</div>
+                <div class="card">Account Types<br>5</div>
+                <div class="card">Accounts<br>7</div>
+                <div class="card">Deposits<br>$1029928</div>
+            </section>
+
+            <section class="financial-summary">
+                <div class="card">Withdrawals<br>$1217</div>
+                <div class="card">Transfers<br>$2141</div>
+                <div class="card">Wallet Balance<br>$1026570</div>
+            </section>
+
+            <section class="charts-container">
+                <div class="charts-header">
+                    <h3>Advanced Analytics</h3>
+                    <button class="minimize-btn" onclick="toggleCharts()">–</button>
+                </div>
+                <div class="charts" id="charts-section">
+                    <div class="chart">
+                        <h3>Accounts Per Acc Types</h3>
+                        <canvas id="accountsChart"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h3>Transactions</h3>
+                        <canvas id="transactionsChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="latest-transactions">
+                <div class="transactions-header">
+                    <h3>Latest Transactions</h3>
+                    <button class="minimize-btn" onclick="toggleTransactions()">–</button>
+                </div>
+                <table class="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>Transaction Code</th>
+                            <th>Account No.</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Acc. Owner</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>QLUFinHGME0kWhaPvSK8</td>
+                            <td>735162098</td>
+                            <td><span class="badge withdrawal">Withdrawal</span></td>
+                            <td>$120</td>
+                            <td>Manas Reddy</td>
+                            <td>22-Jan-2025 10:01:27</td>
+                        </tr>
+                        <tr>
+                            <td>qCg4zjhamkF3iZY9Oxep</td>
+                            <td>735162098</td>
+                            <td><span class="badge transfer">Transfer</span></td>
+                            <td>$120</td>
+                            <td>Manas Reddy</td>
+                            <td>22-Jan-2025 10:01:58</td>
+                        </tr>
+                        <tr>
+                            <td>9n4lmayLYi1Odr3gTxSq</td>
+                            <td>735162098</td>
+                            <td><span class="badge deposit">Deposit</span></td>
+                            <td>$1000000</td>
+                            <td>Manas Reddy</td>
+                            <td>22-Jan-2025 10:01:18</td>
+                        </tr>
+                        <!-- Add more rows as necessary -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Toggle visibility of charts
+        function toggleCharts() {
+            const chartsSection = document.getElementById('charts-section');
+            chartsSection.style.display = chartsSection.style.display === 'none' ? 'grid' : 'none';
+        }
+
+        // Toggle visibility of transactions
+        function toggleTransactions() {
+            const transactionsTable = document.querySelector('.latest-transactions');
+            transactionsTable.style.display = transactionsTable.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Chart data
+        const accountsData = {
+            labels: ['Savings', 'Current', 'Fixed Deposit', 'Retirement'],
+            datasets: [{
+                label: 'Accounts',
+                data: [60, 20, 10, 10],
+                backgroundColor: ['#4caf50', '#2196f3', '#ff9800', '#e91e63']
+            }]
+        };
+
+        const transactionsData = {
+            labels: ['Deposits', 'Withdrawals', 'Transfers'],
+            datasets: [{
+                label: 'Transactions',
+                data: [1029928, 1217, 2141],
+                backgroundColor: ['#ff5722', '#03a9f4', '#8bc34a']
+            }]
+        };
+
+        // Render charts
+        new Chart(document.getElementById('accountsChart'), {
+            type: 'pie',
+            data: accountsData
+        });
+
+        new Chart(document.getElementById('transactionsChart'), {
+            type: 'pie',
+            data: transactionsData
+        });
+    </script>
+</body>
+</html>

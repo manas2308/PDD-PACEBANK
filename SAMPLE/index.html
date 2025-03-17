@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('../SAMPLE/IMAGES/index1.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        .app-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .app-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .app-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .app-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .app-links a:hover {
+            color: #f1c40f;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .app-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background-color: rgba(0, 0, 0, 0.95);
+                padding: 15px;
+                border-radius: 5px;
+                width: 200px;
+                text-align: right;
+            }
+
+            .app-links.active {
+                display: flex;
+                animation: fadeIn 0.3s ease-in-out;
+            }
+
+            .app-links a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .app-links a:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+.logo img {
+    width: 60px; /* Adjust as needed */
+    height: auto;
+    margin-right: 8px; /* Space between image and text */
+}
+
+    </style> 
+</head>
+<body>
+    <div class="app-bar">
+        <div class="logo">
+            <img src="../SAMPLE/IMAGES/logo.PNG" alt="PaceBank Logo">
+            PaceBank
+        </div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="app-links">
+            <a href="../SAMPLE/FRONTEND/admin_login.html">Admin Portal</a>
+            <a href="../SAMPLE/staff/staff_login.php">Staff Portal</a>
+            <a href="../SAMPLE/user/user_signup.php">Client Portal</a>
+            <a href="../SAMPLE/user/user_signup.php">Join Us</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome to Our Banking Platform</h1>
+        <p>Manage your day-to-day financial services safely and efficiently.</p>
+        <button onclick="location.href='../SAMPLE/user/user_signup.php'">Get Started</button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.app-links');
+            menu.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function(event) {
+            const menu = document.querySelector(".app-links");
+            const toggle = document.querySelector(".menu-toggle");
+
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
