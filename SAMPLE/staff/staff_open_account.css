@@ -1,0 +1,219 @@
+/* Container and Sidebar Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fixed position for the sidebar */
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto; /* Scroll if content exceeds window height */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #444;
+    padding-left: 10px;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 270px; /* Adjust for sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    min-height: 100vh; /* Ensure it covers the full height */
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styling */
+.manage-btn, .delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+/* Manage button in green */
+.manage-btn {
+    background-color: #28a745;
+}
+
+.manage-btn:hover {
+    background-color: #218838;
+}
+
+/* Delete button in red */
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Pagination styling */
+.pagination {
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+/* Styles for container, table, and buttons */
+.container1 {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+.open-account-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.open-account-btn:hover {
+    background-color: #218838;
+}
+
+.search-box {
+    margin-bottom: 10px;
+}
+
+.search-box input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

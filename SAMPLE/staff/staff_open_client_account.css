@@ -1,0 +1,153 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #444;
+    padding-left: 10px;
+}
+
+/* Main content next to the sidebar */
+.main-content {
+    margin-left: 270px; /* Adjusted for sidebar width */
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Account form container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 120px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the form and fields */
+.account-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Increased padding, font size, and width for larger input bars */
+.form-row input, .form-row select {
+    padding: 15px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px; /* Larger font size */
+    width: 100%; /* Ensure input takes full width */
+    height: 50px; /* Increased height for larger input fields */
+}
+
+.open-account-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 15px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    grid-column: span 2;
+    font-size: 18px; /* Larger button text */
+    margin-top: 10px;
+}
+
+.open-account-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .account-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-row input, .form-row select {
+        font-size: 16px;
+        padding: 12px;
+        height: 45px;
+    }
+
+    .open-account-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
