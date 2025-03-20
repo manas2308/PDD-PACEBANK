@@ -27,7 +27,7 @@ if (!$client_id) {
 <?php include "sidebar.php";?>
 
 <div class="main-content">
-    <h1>iBanking Advanced Reporting : Deposits</h1>
+    <h1>iBanking Advanced Reporting : Withdrawals</h1>
 
     <div class="filter-container">
         <label for="timeframe">Filter By Timeframe: </label>
